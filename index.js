@@ -1,6 +1,6 @@
 // Return HTML from https://github.com/graphql/graphiql/tree/main/packages/graphiql#cdn-bundle
 
-const graphiqlMiddleware = ({ endpointURL }) => (req, res) => {
+const graphiqlMiddleware = ({ endpointURL }, props = {}) => (req, res) => {
   res.set("Content-Type", "text/html");
   res.send(`<html>
     <head>
@@ -24,6 +24,7 @@ const graphiqlMiddleware = ({ endpointURL }) => (req, res) => {
       ></script>
   
       <script>
+        const props = ${JSON.stringify(props)};
         const graphQLFetcher = graphQLParams =>
           fetch('${encodeURI(endpointURL)}', {
             method: 'post',
@@ -33,7 +34,7 @@ const graphiqlMiddleware = ({ endpointURL }) => (req, res) => {
             .then(response => response.json())
             .catch(() => response.text());
         ReactDOM.render(
-          React.createElement(GraphiQL, { fetcher: graphQLFetcher }),
+          React.createElement(GraphiQL, { fetcher: graphQLFetcher, ...props }),
           document.getElementById('graphiql'),
         );
       </script>
