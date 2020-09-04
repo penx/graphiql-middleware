@@ -25,6 +25,9 @@ app.use(
     '/graphiql',
     graphiqlMiddleware({
         endpointURL: '/graphql',
-    }),
+    }, {
+        headerEditorEnabled: true,
+        shouldPersistHeaders: true
+    })),
 );
 ```
