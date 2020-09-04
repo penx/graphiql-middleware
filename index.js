@@ -1,8 +1,8 @@
 // Return HTML from https://github.com/graphql/graphiql/tree/main/packages/graphiql#cdn-bundle
 
-const graphiqlMiddleware = ({ endpointURL }) => (req, { set, send }) => {
-  set("Content-Type", "text/html");
-  send(`<html>
+const graphiqlMiddleware = ({ endpointURL }) => (req, res) => {
+  res.set("Content-Type", "text/html");
+  res.send(`<html>
     <head>
       <title>Simple GraphiQL Example</title>
       <link href="https://unpkg.com/graphiql/graphiql.min.css" rel="stylesheet" />
