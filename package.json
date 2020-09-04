@@ -1,0 +1,21 @@
+{
+  "name": "graphiql-middleware",
+  "version": "0.0.1",
+  "description": "GraphiQL Middleware e.g. for Express",
+  "main": "index.js",
+  "keywords": [
+    "GraphiQL",
+    "GraphQL",
+    "Express"
+  ],
+  "author": "Alasdair McLeay",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penx/graphiql-middleware.git"
+  },
+  "bugs": {
+    "url": "https://github.com/penx/graphiql-middleware/issues"
+  },
+  "homepage": "https://github.com/penx/graphiql-middleware#readme"
+}
