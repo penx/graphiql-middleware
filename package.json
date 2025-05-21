@@ -1,6 +1,6 @@
 {
   "name": "graphiql-middleware",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "GraphiQL Middleware e.g. for Express",
   "main": "index.js",
   "keywords": [
